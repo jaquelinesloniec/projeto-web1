@@ -1,0 +1,28 @@
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    letter-spacing: 3px;
+    text-align: center;
+    font-size:  black;
+    -webkit-text-stroke: 3px rgba(17, 120, 255, 0.822);
+    font-family: Verdana, sans-serif;
+    font-size: 50px;
+}
+
+#menu-superior {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#botoes-menu {
+    text-align: center;
+}
+
+.hero p, .sobre p, .modalidade p {
+    font-size: 16pt;
+}
