@@ -8,7 +8,7 @@
 h1 {
     letter-spacing: 3px;
     text-align: center;
-    font-size:  black;
+    font-size: black;
     -webkit-text-stroke: 3px rgba(17, 120, 255, 0.822);
     font-family: Verdana, sans-serif;
     font-size: 50px;
@@ -23,6 +23,149 @@ h1 {
     text-align: center;
 }
 
-.hero p, .sobre p, .modalidade p {
+.hero p,
+.sobre p,
+.modalidade p,
+.patrocinadores p,
+.contato p {
     font-size: 16pt;
+}
+
+#foto-esportes {
+    text-align: center;
+}
+
+.futebol {
+    width: 300px;
+    height: auto;
+}
+
+/* Card */
+
+.card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Conteúdo de Texto */
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Botão de Ação */
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+.cards-modalidades {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Formulário */
+
+/* Container do Formulário */
+.contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Grupos de Input */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Botão de Envio */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #1d4ed8;
 }
