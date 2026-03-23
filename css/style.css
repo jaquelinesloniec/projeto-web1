@@ -15,6 +15,7 @@ h1 {
 }
 
 #menu-superior {
+    margin-top: 5%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -168,4 +169,185 @@ h1 {
 
 .submit-btn:hover {
     background-color: #1d4ed8;
+}
+
+/* Fundo do Modal */
+.modal-overlay {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px); /* Efeito de desfoque ao fundo */
+}
+
+/* Caixa do Formulário */
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  margin: 10vh auto;
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: modalEntrada 0.3s ease-out;
+}
+
+@keyframes modalEntrada {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botão Fechar */
+.close-btn {
+  position: absolute;
+  right: 20px; top: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Estilo básico do formulário */
+.input-group { margin-bottom: 15px; text-align: left; }
+.input-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.input-group input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+
+.btn-enviar {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Cor azul dos seus botões */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#barra-acessibilidade {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2000;
+  background: #333;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+#barra-acessibilidade button {
+  background: #f1c40f; /* Cor chamativa para fácil identificação */
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+#barra-acessibilidade button:hover {
+  background: #d4ac0d;
+}
+
+/* Feedback visual: destaca o que está sendo lido no momento */
+.lendo-agora {
+  outline: 3px solid #f1c40f;
+  background-color: rgba(241, 196, 15, 0.1);
+}
+
+:root {
+  --bg-card: #ffffff;
+  --texto-principal: #333333;
+  --cor-primaria: #007bff; /* Azul padrão */
+  --fonte-base: 16px;
+}
+
+/* Classe de Alto Contraste */
+body.alto-contraste {
+  --bg-card: #000000;
+  --texto-principal: #ffff00; /* Texto Amarelo no fundo preto */
+  --cor-primaria: #ffffff;
+  background-color: #1a1a1a !important;
+}
+
+body {
+  font-size: var(--fonte-base);
+  transition: background 0.3s, font-size 0.2s;
+}
+
+.card {
+  background-color: var(--bg-card);
+  color: var(--texto-principal);
+  border: 2px solid var(--cor-primaria);
+}
+
+.btn-abrir {
+  background-color: var(--cor-primaria);
+  color: var(--bg-card); /* Inverte a cor no contraste */
+}
+
+/* Container que segura os cards */
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;       /* Essencial: faz os cards pularem de linha */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo Base do Card (Celular) */
+.card {
+    background: var(--bg-card);
+    width: 100%;          /* No celular, o card ocupa a largura toda */
+    max-width: 350px;     /* Mas não deixa ficar gigante se o celular for grande */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* --- MEDIA QUERIES (Ajustes para telas maiores) --- */
+
+/* Tablets (Acima de 768px) */
+@media (min-width: 768px) {
+    .card {
+        width: calc(45% - 20px); /* Exibe 2 cards por linha */
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Desktops (Acima de 1024px) */
+@media (min-width: 1024px) {
+    .card {
+        width: 280px; /* Exibe 3 ou 4 cards por linha dependendo da tela */
+    }
+    .container-cards {
+        max-width: 1200px; /* Centraliza o conteúdo em telas muito largas */
+        margin: 0 auto;
+    }
+}
+
+/* Ajuste do Modal para telas pequenas */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 15px;
+    }
+    .barra-acessibilidade {
+        flex-wrap: wrap; /* Botões de acessibilidade se ajustam no topo */
+        justify-content: center;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
