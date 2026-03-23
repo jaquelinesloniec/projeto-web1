@@ -351,3 +351,364 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+/* Configuração Base do Rodapé */
+.rodape-arena {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 50px 20px 20px;
+    margin-top: 50px;
+    border-top: 5px solid #007bff; /* Cor primária */
+}
+
+.container-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 250px;
+}
+
+.coluna h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+/* Estilo dos Ícones e Textos */
+.coluna p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.coluna i {
+    width: 20px;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Redes Sociais */
+.lista-sociais {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-sociais li {
+    margin-bottom: 12px;
+}
+
+.lista-sociais a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.lista-sociais a:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+/* Rodapé Inferior */
+.rodape-inferior {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* --- ADAPTAÇÃO PARA ALTO CONTRASTE --- */
+body.alto-contraste .rodape-arena {
+    background-color: #000;
+    color: #ffff00;
+    border-top: 5px solid #ffff00;
+}
+
+body.alto-contraste .coluna h3, 
+body.alto-contraste .coluna i,
+body.alto-contraste .lista-sociais a:hover {
+    color: #ffff00;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .container-rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+    .coluna p, .lista-sociais a {
+        justify-content: center;
+    }
+}
+.manifesto-arena {
+    padding: 80px 20px;
+    background-color: var(--bg-card);
+    line-height: 1.8;
+}
+
+.container-texto {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    font-size: 2.5rem;
+    color: var(--primaria);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grid-desafios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.pilares-redescoberta {
+    list-style: none;
+    padding: 0;
+    background: rgba(0, 123, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.pilares-redescoberta li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.destaque-familia {
+    border-left: 5px solid var(--primaria);
+    padding-left: 30px;
+    margin: 50px 0;
+}
+
+.citacao {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+body.alto-contraste .citacao { color: #ffff00; }
+
+.btn-ouvir-texto {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    background: var(--primaria);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-desafios { grid-template-columns: 1fr; }
+    .titulo-principal { font-size: 1.8rem; }
+}
+
+.secao-patrocinadores {
+    padding: 80px 20px;
+    background-color: var(--bg-card);
+    border-top: 2px solid #eee;
+}
+
+.conteudo-patrocinio {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.texto-patrocinio h2 {
+    font-size: 2.2rem;
+    color: var(--primaria);
+    margin-bottom: 30px;
+}
+
+.beneficios-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+    text-align: left;
+}
+
+.item-beneficio {
+    display: flex;
+    gap: 15px;
+    background: var(--destaque);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.item-beneficio i {
+    font-size: 1.5rem;
+    color: var(--primaria);
+}
+
+.btn-patrocinio {
+    background-color: #28a745; /* Verde para simbolizar crescimento/investimento */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-patrocinio:hover {
+    transform: scale(1.05);
+    background-color: #218838;
+}
+
+/* Logos */
+.logos-patrocinadores {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.grid-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    opacity: 0.7;
+}
+
+.logo-placeholder {
+    width: 150px;
+    height: 80px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* ALTO CONTRASTE */
+body.alto-contraste .item-beneficio {
+    background: #000;
+    border: 1px solid #ffff00;
+}
+body.alto-contraste .btn-patrocinio {
+    background-color: #ffff00;
+    color: #000;
+}
+
+/* Garante que os inputs dentro do modal de patrocínio fiquem organizados */
+#formPatrocinio label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#formPatrocinio input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Importante para não vazar a largura */
+}
+
+/* Reutilizando o estilo do botão de envio que já definimos */
+.btn-enviar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.secao-duvidas {
+    padding: 60px 20px;
+    background-color: #f1f8ff; /* Azul bem clarinho */
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    border: 2px dashed var(--primaria);
+}
+
+.container-duvidas {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.icone-duvidas {
+    font-size: 4rem;
+    color: var(--primaria);
+    flex: 1;
+    text-align: center;
+    min-width: 100px;
+}
+
+.texto-duvidas { flex: 4; min-width: 300px; }
+
+.botoes-contato {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp-direto {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-sugestao {
+    background-color: var(--primaria);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ALTO CONTRASTE */
+body.alto-contraste .secao-duvidas {
+    background-color: #000;
+    border: 2px dashed #ffff00;
+}
+body.alto-contraste .btn-whatsapp-direto,
+body.alto-contraste .btn-sugestao {
+    background-color: #ffff00;
+    color: #000;
+}

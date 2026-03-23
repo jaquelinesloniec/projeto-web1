@@ -110,3 +110,58 @@ window.onload = () => {
     document.body.classList.add('alto-contraste');
   }
 };
+
+function lerManifesto() {
+    window.speechSynthesis.cancel();
+    const textoCompleto = document.querySelector('.container-texto').innerText.replace("🔊 Ouvir Manifesto Completo", "");
+    const utterance = new SpeechSynthesisUtterance(textoCompleto);
+    utterance.lang = 'pt-BR';
+    utterance.rate = 1.0;
+    window.speechSynthesis.speak(utterance);
+}
+
+// Seletores para Patrocínio
+const modalPatrocinio = document.getElementById('modalPatrocinio');
+const btnAbrirPatrocinio = document.getElementById('btn-contato-patrocinio');
+const btnFecharPatrocinio = document.querySelector('.fechar-modal-patrocinio');
+
+// Abrir o modal de patrocínio
+btnAbrirPatrocinio.onclick = function() {
+    modalPatrocinio.style.display = "block";
+}
+
+// Fechar o modal de patrocínio
+btnFecharPatrocinio.onclick = function() {
+    modalPatrocinio.style.display = "none";
+}
+
+// Fechar se clicar fora da caixa branca
+window.addEventListener('click', (event) => {
+    if (event.target == modalPatrocinio) {
+        modalPatrocinio.style.display = "none";
+    }
+});
+
+// Mensagem de sucesso ao enviar (simulação)
+document.getElementById('formPatrocinio').onsubmit = function(e) {
+    e.preventDefault();
+    alert("Obrigado pelo interesse! Nossa equipe de captação entrará em contato com a sua empresa em breve.");
+    modalPatrocinio.style.display = "none";
+}
+
+const modalSugestao = document.getElementById('modalSugestao');
+const btnAbrirSugestao = document.getElementById('btn-abrir-sugestao');
+const btnFecharSugestao = document.querySelector('.fechar-modal-sugestao');
+
+btnAbrirSugestao.onclick = () => modalSugestao.style.display = "block";
+btnFecharSugestao.onclick = () => modalSugestao.style.display = "none";
+
+window.addEventListener('click', (e) => {
+    if (e.target == modalSugestao) modalSugestao.style.display = "none";
+});
+
+document.getElementById('formSugestao').onsubmit = function(e) {
+    e.preventDefault();
+    alert("Sua sugestão foi enviada com sucesso! Juntos somos mais fortes.");
+    modalSugestao.style.display = "none";
+};
