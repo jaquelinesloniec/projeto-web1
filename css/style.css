@@ -712,3 +712,20 @@ body.alto-contraste .btn-sugestao {
     background-color: #ffff00;
     color: #000;
 }
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cards-modalidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 300px;
+}
